@@ -226,7 +226,7 @@ const cardSwipe = (key) => {
     {
       qno:'04',
       question:'How do you make a 3D animated ad for a client?',
-      answer:'I simply listen to their ideas, build the animation in Blender, and then add it to their website.'
+      answer:'I will simply listen to their ideas, build the animation in Blender, and then add it to their website.'
     },
     {
       qno:'05',
@@ -353,18 +353,18 @@ const cardSwipe = (key) => {
 // });
 
   useGSAP(function () {
-    // const stairsDiv = gsap.timeline();
-    // stairsDiv.to('.stairs', {
-    //   y:'-40rem',
-    //   delay:2.5,
-    //   ease:'power2.inOut',
-    //   duration:1.5,
-    //   stagger:{
-    //     amount:1
-    //   }
-    // },'a')
+    const stairsDiv = gsap.timeline();
+    stairsDiv.to('.stairs', {
+      y:'-100vh',
+      delay:2.5,
+      ease:'power2.inOut',
+      duration:1.5,
+      stagger:{
+        amount:1
+      }
+    },'a')
     gsap.to('.counterDiv', {opacity:0, duration:1, delay:2, ease:'power2'})
-    // stairsDiv.to('.stairsContainer', {display:'none'})
+    stairsDiv.to('.stairsContainer', {display:'none'})
 
     let mm = gsap.matchMedia();
 
@@ -391,8 +391,9 @@ mm.add("(min-width: 1025px)", () => {
   const cards = ['.helpCard1', '.helpCard2', '.helpCard3', '.helpCard4'];
 
   cards.forEach((card) => {
-    gsap.to(card, {scrollTrigger: {trigger: card,start: 'top 30%',markers:true,endTrigger: '.helpCard4',end: 'top 30%',pin: true,pinSpacing: false, },});
+    gsap.to(card, {scrollTrigger: {trigger: card,start: 'top 30%',endTrigger: '.helpCard4',end: 'top 30%',pin: true,pinSpacing: false, },});
     gsap.from(card,{rotate:45,scrollTrigger: {trigger: card,start: 'top 100%', end:'top 40%', scrub:true}})
+
   });});
 
       gsap.to(containerRef.current, {x:'-100rem',ease:'none', duration:40, repeat:-1, yoyo:true})
@@ -402,18 +403,19 @@ mm.add("(min-width: 1025px)", () => {
 
   return (
     <div className='potfolio relative w-full min-h-screen bg-black overflow-hidden text-white'>
-      {/* <div className="stairsContainer fixed inset-0 z-50 h-screen w-screen flex flex-col items-center justify-center bg-transparent text-white">
+
+      <div className="stairsContainer fixed inset-0 z-50 h-screen w-screen flex flex-col items-center justify-center bg-transparent text-white">
         <div className='absolute top-0 left-0 h-full w-full bg-transparent flex pointer-events-none'>
-          <div className='stairs h-full w-1/4 bg-black'></div>
-          <div className='stairs h-full w-1/4 bg-black'></div>
-          <div className='stairs h-full w-1/4 bg-black'></div>
-          <div className='stairs h-full w-1/4 bg-black'></div>
+          <div className='stairs h-full w-1/4 bg-black scale-x-[1.02]'></div>
+          <div className='stairs h-full w-1/4 bg-black scale-x-[1.02]'></div>
+          <div className='stairs h-full w-1/4 bg-black scale-x-[1.02]'></div>
+          <div className='stairs h-full w-1/4 bg-black scale-x-[1.02]'></div>
         </div>
         <h1 className="counterDiv flex items-baseline text-[25vw] md:text-[15rem] font-extrabold font-mono z-10">
           {count}
           <span className='text-red-600 font-light text-[15vw] md:text-[10rem]'>%</span>
         </h1>
-      </div> */}
+      </div>
 
       {/* 2. Responsive Navigation */}
       <div className='nav fixed z-40 top-6 md:top-12 left-1/2 -translate-x-1/2 rounded-full backdrop-blur-md border border-gray-500/30 h-14 w-[90%] max-w-lg flex items-center justify-between px-4 overflow-hidden bg-gray-400/10 shadow-lg'
@@ -707,7 +709,7 @@ mm.add("(min-width: 1025px)", () => {
         {/* Left Profile Column */}
         <div className='w-full lg:w-2/5 flex flex-col items-center justify-center py-16 lg:py-24 px-6 lg:border-r border-white/10'>
           
-          <div className='w-full max-w-[20rem] md:max-w-[22rem] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl mb-8 border border-white/10'>
+          <div className='w-full max-w-[20rem] md:max-w-[22rem] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl mb-8 border-white/10'>
             <img className='h-full w-full object-cover' src="/instaPotfolioPic.jpg" alt="Hamza Khalid" />
           </div>
           

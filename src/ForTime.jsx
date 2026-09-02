@@ -118,8 +118,6 @@ const H = () => {
     .to(selected, { rotate:0, x: 0, duration: 0.5, ease: 'power2.out' })
     
 };
-
-
   const projectsArr = [
     {
       p1:'/sienaProjectPic.jpg',
@@ -523,6 +521,7 @@ mm.add("(min-width: 1025px)", () => {
 
   return (
     <div className='potfolio relative w-[80rem] min-h-[39.82rem] bg-black overflow-hidden text-white'>
+      
       <div className="stairsContainer fixed inset-0 z-50 h-screen w-screen flex flex-col items-center justify-center bg-transparent text-white">
         <div className=' absolute top-0 left-0 h-full w-full bg-transparent flex pointer-events-none'>
           <div className='stairs h-full w-1/4 bg-black'></div>
