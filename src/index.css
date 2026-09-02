@@ -1,0 +1,65 @@
+
+@import "tailwindcss";
+
+/* Hide scrollbar globally across all browsers */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif; /* <-- Add this line */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+.potfolio::-webkit-scrollbar {
+    display: none;
+}
+.potfolio {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projectsPart::-webkit-scrollbar {
+    display: none;
+}
+.projectsPart {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.paragraphDiv .bookbutton {
+  word-spacing: -0.05rem;
+}
+
+.skillInfoh1 {
+  word-spacing: -0.08rem;
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
